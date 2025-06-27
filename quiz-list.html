@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - E-Learning PT. Cipta Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar bg-white shadow-sm">
+            <div class="sidebar-header p-3 border-bottom">
+                <a href="index.html" class="text-decoration-none">
+                    <i class="fas fa-hospital-alt text-primary me-2"></i>
+                    <span class="fw-bold text-primary">Cipta Hospital</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-content p-3">
+                <div class="nav flex-column">
+                    <a href="dashboard.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-tachometer-alt me-3"></i>
+                        Dashboard
+                    </a>
+                    <a href="materi-list.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-book-medical me-3"></i>
+                        Materi
+                    </a>
+                    <a href="quiz-list.html" class="nav-link active d-flex align-items-center py-3">
+                        <i class="fas fa-question-circle me-3"></i>
+                        Quiz
+                    </a>
+                    <a href="sertifikat.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-certificate me-3"></i>
+                        Sertifikat
+                    </a>
+                    <a href="settings.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-cog me-3"></i>
+                        Settings
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content flex-grow-1">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <h4 class="mb-0 fw-bold text-primary">Quiz & Evaluasi</h4>
+                    
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                                <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=DR" class="rounded-circle me-2" alt="Profile">
+                                <span>Dr. John Doe</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <div class="container-fluid p-4">
+                <!-- Stats Cards -->
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm text-center">
+                            <div class="card-body">
+                                <i class="fas fa-clipboard-check text-success fs-1 mb-3"></i>
+                                <h4 class="fw-bold text-success">8</h4>
+                                <p class="text-muted mb-0">Quiz Selesai</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm text-center">
+                            <div class="card-body">
+                                <i class="fas fa-clock text-warning fs-1 mb-3"></i>
+                                <h4 class="fw-bold text-warning">3</h4>
+                                <p class="text-muted mb-0">Quiz Pending</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm text-center">
+                            <div class="card-body">
+                                <i class="fas fa-percentage text-primary fs-1 mb-3"></i>
+                                <h4 class="fw-bold text-primary">87%</h4>
+                                <p class="text-muted mb-0">Rata-rata Skor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm text-center">
+                            <div class="card-body">
+                                <i class="fas fa-trophy text-warning fs-1 mb-3"></i>
+                                <h4 class="fw-bold text-warning">5</h4>
+                                <p class="text-muted mb-0">Skor Tertinggi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Available Quizzes -->
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="fw-bold mb-3">Quiz Tersedia</h5>
+                        
+                        <!-- Quiz Item 1 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-1 text-center">
+                                        <i class="fas fa-heartbeat text-danger fs-2"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5 class="fw-bold mb-2">Quiz Kardiologi Dasar</h5>
+                                        <p class="text-muted mb-2">Evaluasi pemahaman tentang anatomi jantung, fisiologi kardiovaskular, dan pemeriksaan fisik.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-danger me-2">Kardiologi</span>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-question-circle me-1"></i>20 soal
+                                            </small>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-clock me-1"></i>30 menit
+                                            </small>
+                                            <small class="text-success">
+                                                <i class="fas fa-check-circle me-1"></i>Selesai - Skor: 95%
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <button class="btn btn-outline-success me-2" onclick="showResults('kardiologi')">
+                                            <i class="fas fa-chart-bar me-1"></i>Lihat Hasil
+                                        </button>
+                                        <button class="btn btn-success" onclick="retakeQuiz('kardiologi')">
+                                            <i class="fas fa-redo me-1"></i>Ulangi
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Item 2 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-1 text-center">
+                                        <i class="fas fa-brain text-primary fs-2"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5 class="fw-bold mb-2">Quiz Neurologi</h5>
+                                        <p class="text-muted mb-2">Tes pengetahuan tentang sistem saraf, pemeriksaan neurologis, dan gangguan neurologis.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-primary me-2">Neurologi</span>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-question-circle me-1"></i>25 soal
+                                            </small>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-clock me-1"></i>45 menit
+                                            </small>
+                                            <small class="text-warning">
+                                                <i class="fas fa-clock me-1"></i>Dalam Progress - 60% selesai
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <button class="btn btn-warning" onclick="continueQuiz('neurologi')">
+                                            <i class="fas fa-play me-1"></i>Lanjutkan
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Item 3 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-1 text-center">
+                                        <i class="fas fa-baby text-success fs-2"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5 class="fw-bold mb-2">Quiz Pediatri</h5>
+                                        <p class="text-muted mb-2">Evaluasi pengetahuan tentang kesehatan anak, tumbuh kembang, dan penyakit pediatri.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-success me-2">Pediatri</span>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-question-circle me-1"></i>18 soal
+                                            </small>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-clock me-1"></i>25 menit
+                                            </small>
+                                            <small class="text-muted">
+                                                <i class="fas fa-lock me-1"></i>Belum tersedia
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <button class="btn btn-secondary" disabled>
+                                            <i class="fas fa-lock me-1"></i>Terkunci
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Item 4 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-1 text-center">
+                                        <i class="fas fa-pills text-warning fs-2"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5 class="fw-bold mb-2">Quiz Farmakologi</h5>
+                                        <p class="text-muted mb-2">Tes pemahaman tentang obat-obatan, dosis, interaksi obat, dan efek samping.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-warning me-2">Farmakologi</span>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-question-circle me-1"></i>30 soal
+                                            </small>
+                                            <small class="text-muted me-3">
+                                                <i class="fas fa-clock me-1"></i>50 menit
+                                            </small>
+                                            <small class="text-info">
+                                                <i class="fas fa-play-circle me-1"></i>Siap dimulai
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <button class="btn btn-primary" onclick="startQuiz('farmakologi')">
+                                            <i class="fas fa-play me-1"></i>Mulai Quiz
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Results -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h5 class="fw-bold mb-3">Hasil Quiz Terbaru</h5>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Quiz</th>
+                                                <th>Tanggal</th>
+                                                <th>Skor</th>
+                                                <th>Waktu</th>
+                                                <th>Status</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-heartbeat text-danger me-2"></i>
+                                                        Quiz Kardiologi Dasar
+                                                    </div>
+                                                </td>
+                                                <td>15 Des 2024</td>
+                                                <td>
+                                                    <span class="badge bg-success">95%</span>
+                                                </td>
+                                                <td>28 menit</td>
+                                                <td>
+                                                    <span class="badge bg-success">Lulus</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-x-ray text-info me-2"></i>
+                                                        Quiz Radiologi
+                                                    </div>
+                                                </td>
+                                                <td>12 Des 2024</td>
+                                                <td>
+                                                    <span class="badge bg-warning">78%</span>
+                                                </td>
+                                                <td>35 menit</td>
+                                                <td>
+                                                    <span class="badge bg-warning">Perlu Perbaikan</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-user-md text-secondary me-2"></i>
+                                                        Quiz Anatomi Umum
+                                                    </div>
+                                                </td>
+                                                <td>10 Des 2024</td>
+                                                <td>
+                                                    <span class="badge bg-success">92%</span>
+                                                </td>
+                                                <td>22 menit</td>
+                                                <td>
+                                                    <span class="badge bg-success">Lulus</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div class="modal fade" id="quizModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quiz Farmakologi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <span class="badge bg-primary">Soal 1 dari 30</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-clock text-warning me-1"></i>
+                            <span id="timer" class="fw-bold">49:32</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress mb-4" style="height: 8px;">
+                        <div class="progress-bar" style="width: 3.33%"></div>
+                    </div>
+
+                    <div class="question-container">
+                        <h6 class="fw-bold mb-3">Obat manakah yang merupakan ACE inhibitor?</h6>
+                        
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer" id="option1" value="A">
+                            <label class="form-check-label" for="option1">
+                                A. Amlodipine
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer" id="option2" value="B">
+                            <label class="form-check-label" for="option2">
+                                B. Lisinopril
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer" id="option3" value="C">
+                            <label class="form-check-label" for="option3">
+                                C. Metoprolol
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="answer" id="option4" value="D">
+                            <label class="form-check-label" for="option4">
+                                D. Hydrochlorothiazide
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" disabled>
+                        <i class="fas fa-chevron-left me-1"></i>Sebelumnya
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="nextQuestion()">
+                        Selanjutnya<i class="fas fa-chevron-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function startQuiz(subject) {
+            const modal = new bootstrap.Modal(document.getElementById('quizModal'));
+            modal.show();
+            startTimer();
+        }
+
+        function continueQuiz(subject) {
+            alert('Melanjutkan quiz ' + subject + '...');
+        }
+
+        function retakeQuiz(subject) {
+            if (confirm('Apakah Anda yakin ingin mengulang quiz ini?')) {
+                startQuiz(subject);
+            }
+        }
+
+        function showResults(subject) {
+            alert('Menampilkan hasil quiz ' + subject + '...');
+        }
+
+        function nextQuestion() {
+            // Simulate next question
+            alert('Pindah ke soal berikutnya...');
+        }
+
+        function startTimer() {
+            let timeLeft = 50 * 60; // 50 minutes in seconds
+            const timer = document.getElementById('timer');
+            
+            const countdown = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    alert('Waktu habis!');
+                }
+                timeLeft--;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

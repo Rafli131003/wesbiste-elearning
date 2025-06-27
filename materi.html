@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi: Pengantar Kardiologi - E-Learning PT. Cipta Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a href="dashboard.html" class="btn btn-outline-secondary me-3">
+                <i class="fas fa-arrow-left me-2"></i>Kembali ke Dashboard
+            </a>
+            
+            <div class="navbar-brand">
+                <i class="fas fa-hospital-alt text-primary me-2"></i>
+                <span class="fw-bold text-primary">Cipta Hospital E-Learning</span>
+            </div>
+            
+            <div class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                        <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=DR" class="rounded-circle me-2" alt="Profile">
+                        <span>Dr. John Doe</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <div class="p-4">
+                    <!-- Course Header -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="course-icon bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                    <i class="fas fa-heartbeat text-primary fs-4"></i>
+                                </div>
+                                <div>
+                                    <h2 class="fw-bold mb-1">Pengantar Kardiologi</h2>
+                                    <p class="text-muted mb-0">Modul 1: Dasar-dasar Sistem Kardiovaskular</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row text-center">
+                                <div class="col-md-3 col-6 mb-2">
+                                    <small class="text-muted d-block">Durasi</small>
+                                    <strong>45 menit</strong>
+                                </div>
+                                <div class="col-md-3 col-6 mb-2">
+                                    <small class="text-muted d-block">Level</small>
+                                    <strong>Pemula</strong>
+                                </div>
+                                <div class="col-md-3 col-6 mb-2">
+                                    <small class="text-muted d-block">Bahasa</small>
+                                    <strong>Indonesia</strong>
+                                </div>
+                                <div class="col-md-3 col-6 mb-2">
+                                    <small class="text-muted d-block">Sertifikat</small>
+                                    <strong>Ya</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Player -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-0">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <div class="video-container bg-dark d-flex align-items-center justify-content-center" style="height: 400px;">
+                                    <div class="text-center text-white">
+                                        <i class="fas fa-play-circle fs-1 mb-3"></i>
+                                        <h5>Video: Pengantar Kardiologi</h5>
+                                        <p class="mb-3">Durasi: 45:30</p>
+                                        <button class="btn btn-primary btn-lg" onclick="playVideo()">
+                                            <i class="fas fa-play me-2"></i>Putar Video
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Controls -->
+                            <div class="p-3 border-top">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-secondary btn-sm me-2">
+                                            <i class="fas fa-backward"></i>
+                                        </button>
+                                        <button class="btn btn-primary btn-sm me-2">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary btn-sm me-3">
+                                            <i class="fas fa-forward"></i>
+                                        </button>
+                                        <span class="text-muted small">00:00 / 45:30</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-secondary btn-sm me-2">
+                                            <i class="fas fa-closed-captioning"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary btn-sm me-2">
+                                            <i class="fas fa-cog"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary btn-sm">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Description -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-bottom">
+                            <h5 class="fw-bold mb-0">Deskripsi Materi</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-justify">
+                                <p>Dalam modul ini, Anda akan mempelajari dasar-dasar sistem kardiovaskular yang merupakan fondasi penting dalam memahami kardiologi. Materi ini dirancang khusus untuk tenaga medis yang ingin memperdalam pengetahuan tentang jantung dan pembuluh darah.</p>
+                                
+                                <h6 class="fw-bold mt-4 mb-3">Tujuan Pembelajaran:</h6>
+                                <ul>
+                                    <li>Memahami anatomi dan fisiologi jantung</li>
+                                    <li>Mengenal sistem peredaran darah</li>
+                                    <li>Memahami mekanisme kontraksi jantung</li>
+                                    <li>Mengenal kelainan kardiovaskular yang umum</li>
+                                </ul>
+
+                                <h6 class="fw-bold mt-4 mb-3">Materi yang Dibahas:</h6>
+                                <ol>
+                                    <li>Anatomi Jantung dan Pembuluh Darah</li>
+                                    <li>Fisiologi Sistem Kardiovaskular</li>
+                                    <li>Elektrokardiografi Dasar</li>
+                                    <li>Pemeriksaan Fisik Kardiovaskular</li>
+                                    <li>Interpretasi Hasil Pemeriksaan</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-outline-secondary" disabled>
+                                    <i class="fas fa-chevron-left me-2"></i>Materi Sebelumnya
+                                </button>
+                                <div class="text-center">
+                                    <small class="text-muted">Progress: 1 dari 5 modul</small>
+                                    <div class="progress mt-2" style="width: 200px;">
+                                        <div class="progress-bar" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">
+                                    Materi Berikutnya<i class="fas fa-chevron-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="p-4">
+                    <!-- Download Materials -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-bottom">
+                            <h6 class="fw-bold mb-0">Materi Download</h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <i class="fas fa-file-pdf text-danger fs-4 me-3"></i>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Slide Presentasi</h6>
+                                        <small class="text-muted">PDF • 2.5 MB</small>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <i class="fas fa-file-word text-primary fs-4 me-3"></i>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Handout Materi</h6>
+                                        <small class="text-muted">DOCX • 1.8 MB</small>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <i class="fas fa-file-excel text-success fs-4 me-3"></i>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Checklist Pemeriksaan</h6>
+                                        <small class="text-muted">XLSX • 0.5 MB</small>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Outline -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-bottom">
+                            <h6 class="fw-bold mb-0">Outline Kursus</h6>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex align-items-center py-3 active">
+                                    <div class="me-3">
+                                        <i class="fas fa-play-circle text-white"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 text-white">1. Pengantar Kardiologi</h6>
+                                        <small class="text-white-50">45 menit</small>
+                                    </div>
+                                    <i class="fas fa-check-circle text-white"></i>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-lock text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">2. EKG Dasar</h6>
+                                        <small class="text-muted">60 menit</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-lock text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">3. Pemeriksaan Fisik</h6>
+                                        <small class="text-muted">40 menit</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-lock text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">4. Kasus Klinis</h6>
+                                        <small class="text-muted">30 menit</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center py-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-question-circle text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">5. Quiz Akhir</h6>
+                                        <small class="text-muted">20 soal</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instructor Info -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-bottom">
+                            <h6 class="fw-bold mb-0">Instruktur</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=DR" class="rounded-circle me-3" alt="Instructor">
+                                <div>
+                                    <h6 class="fw-bold mb-1">Dr. Sarah Johnson</h6>
+                                    <small class="text-muted">Spesialis Kardiologi</small>
+                                </div>
+                            </div>
+                            <p class="small text-muted mb-3">Dr. Sarah adalah spesialis kardiologi dengan pengalaman 15 tahun di bidang kardiovaskular dan telah menangani ribuan kasus jantung.</p>
+                            <div class="d-flex justify-content-between text-center">
+                                <div>
+                                    <strong class="d-block">50+</strong>
+                                    <small class="text-muted">Kursus</small>
+                                </div>
+                                <div>
+                                    <strong class="d-block">1,200+</strong>
+                                    <small class="text-muted">Siswa</small>
+                                </div>
+                                <div>
+                                    <strong class="d-block">4.9</strong>
+                                    <small class="text-muted">Rating</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function playVideo() {
+            // Simulate video playing
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.innerHTML = `
+                <div class="w-100 h-100 bg-secondary d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <i class="fas fa-pause fs-1 mb-3"></i>
+                        <h5>Video sedang diputar...</h5>
+                        <p>Simulasi video player</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

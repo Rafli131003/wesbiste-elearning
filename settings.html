@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - E-Learning PT. Cipta Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar bg-white shadow-sm">
+            <div class="sidebar-header p-3 border-bottom">
+                <a href="index.html" class="text-decoration-none">
+                    <i class="fas fa-hospital-alt text-primary me-2"></i>
+                    <span class="fw-bold text-primary">Cipta Hospital</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-content p-3">
+                <div class="nav flex-column">
+                    <a href="dashboard.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-tachometer-alt me-3"></i>
+                        Dashboard
+                    </a>
+                    <a href="materi-list.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-book-medical me-3"></i>
+                        Materi
+                    </a>
+                    <a href="quiz-list.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-question-circle me-3"></i>
+                        Quiz
+                    </a>
+                    <a href="sertifikat.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-certificate me-3"></i>
+                        Sertifikat
+                    </a>
+                    <a href="settings.html" class="nav-link active d-flex align-items-center py-3">
+                        <i class="fas fa-cog me-3"></i>
+                        Settings
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content flex-grow-1">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <h4 class="mb-0 fw-bold text-primary">Pengaturan</h4>
+                    
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                                <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=DR" class="rounded-circle me-2" alt="Profile">
+                                <span>Dr. John Doe</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <div class="container-fluid p-4">
+                <div class="row">
+                    <!-- Settings Navigation -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-white border-bottom">
+                                <h6 class="fw-bold mb-0">Pengaturan</h6>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a href="#profile" class="list-group-item list-group-item-action active" onclick="showSection('profile')">
+                                    <i class="fas fa-user me-2"></i>Profil
+                                </a>
+                                <a href="#account" class="list-group-item list-group-item-action" onclick="showSection('account')">
+                                    <i class="fas fa-key me-2"></i>Akun & Keamanan
+                                </a>
+                                <a href="#notifications" class="list-group-item list-group-item-action" onclick="showSection('notifications')">
+                                    <i class="fas fa-bell me-2"></i>Notifikasi
+                                </a>
+                                <a href="#preferences" class="list-group-item list-group-item-action" onclick="showSection('preferences')">
+                                    <i class="fas fa-cog me-2"></i>Preferensi
+                                </a>
+                                <a href="#privacy" class="list-group-item list-group-item-action" onclick="showSection('privacy')">
+                                    <i class="fas fa-shield-alt me-2"></i>Privasi
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Content -->
+                    <div class="col-lg-9">
+                        <!-- Profile Section -->
+                        <div id="profile-section" class="settings-section">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Informasi Profil</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col-12 text-center">
+                                                <div class="profile-photo-container position-relative d-inline-block">
+                                                    <img src="https://via.placeholder.com/120x120/007bff/ffffff?text=DR" class="rounded-circle" alt="Profile Photo" width="120" height="120">
+                                                    <button type="button" class="btn btn-primary btn-sm position-absolute bottom-0 end-0 rounded-circle" style="width: 35px; height: 35px;">
+                                                        <i class="fas fa-camera"></i>
+                                                    </button>
+                                                </div>
+                                                <p class="text-muted mt-2">Klik untuk mengubah foto profil</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="firstName" class="form-label fw-semibold">Nama Depan</label>
+                                                <input type="text" class="form-control" id="firstName" value="John">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="lastName" class="form-label fw-semibold">Nama Belakang</label>
+                                                <input type="text" class="form-control" id="lastName" value="Doe">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label fw-semibold">Email</label>
+                                                <input type="email" class="form-control" id="email" value="john.doe@ciptahospital.co.id">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="phone" class="form-label fw-semibold">Nomor Telepon</label>
+                                                <input type="tel" class="form-control" id="phone" value="+62 812 3456 7890">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="specialization" class="form-label fw-semibold">Spesialisasi</label>
+                                                <select class="form-select" id="specialization">
+                                                    <option>Kardiologi</option>
+                                                    <option>Neurologi</option>
+                                                    <option>Pediatri</option>
+                                                    <option>Farmakologi</option>
+                                                    <option>Radiologi</option>
+                                                    <option>Umum</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="experience" class="form-label fw-semibold">Pengalaman (Tahun)</label>
+                                                <input type="number" class="form-control" id="experience" value="8">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="bio" class="form-label fw-semibold">Bio</label>
+                                            <textarea class="form-control" id="bio" rows="3" placeholder="Ceritakan tentang diri Anda...">Dokter spesialis kardiologi dengan pengalaman 8 tahun di bidang kesehatan jantung dan pembuluh darah.</textarea>
+                                        </div>
+
+                                        <div class="text-end">
+                                            <button type="button" class="btn btn-outline-secondary me-2">Batal</button>
+                                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Section -->
+                        <div id="account-section" class="settings-section d-none">
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Ubah Password</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="currentPassword" class="form-label fw-semibold">Password Saat Ini</label>
+                                            <input type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="newPassword" class="form-label fw-semibold">Password Baru</label>
+                                            <input type="password" class="form-control" id="newPassword">
+                                            <div class="form-text">Password minimal 8 karakter dengan kombinasi huruf dan angka</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="confirmPassword" class="form-label fw-semibold">Konfirmasi Password Baru</label>
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Ubah Password</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Keamanan Akun</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="fw-semibold mb-1">Autentikasi Dua Faktor</h6>
+                                            <small class="text-muted">Tambahkan lapisan keamanan ekstra untuk akun Anda</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h6 class="fw-semibold mb-1">Notifikasi Login</h6>
+                                            <small class="text-muted">Dapatkan notifikasi saat ada login dari perangkat baru</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="loginNotifications" checked>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="fw-semibold mb-1">Sesi Aktif</h6>
+                                            <small class="text-muted">Kelola perangkat yang terhubung ke akun Anda</small>
+                                        </div>
+                                        <button class="btn btn-outline-primary btn-sm">Kelola Sesi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Section -->
+                        <div id="notifications-section" class="settings-section d-none">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Pengaturan Notifikasi</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <h6 class="fw-semibold mb-3">Email Notifications</h6>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <div class="fw-semibold">Materi Baru</div>
+                                                <small class="text-muted">Notifikasi saat ada materi pembelajaran baru</small>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="newMaterialEmail" checked>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <div class="fw-semibold">Pengingat Quiz</div>
+                                                <small class="text-muted">Pengingat untuk menyelesaikan quiz yang belum selesai</small>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="quizReminderEmail" checked>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <div class="fw-semibold">Sertifikat Baru</div>
+                                                <small class="text-muted">Notifikasi saat Anda mendapatkan sertifikat baru</small>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="certificateEmail" checked>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <h6 class="fw-semibold mb-3">Push Notifications</h6>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <div class="fw-semibold">Pengingat Belajar</div>
+                                                <small class="text-muted">Pengingat harian untuk melanjutkan pembelajaran</small>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="studyReminderPush">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <div class="fw-semibold">Update Progress</div>
+                                                <small class="text-muted">Notifikasi tentang kemajuan pembelajaran Anda</small>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="progressPush" checked>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <button type="button" class="btn btn-primary">Simpan Pengaturan</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preferences Section -->
+                        <div id="preferences-section" class="settings-section d-none">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Preferensi Pembelajaran</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="language" class="form-label fw-semibold">Bahasa</label>
+                                            <select class="form-select" id="language">
+                                                <option value="id" selected>Bahasa Indonesia</option>
+                                                <option value="en">English</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="timezone" class="form-label fw-semibold">Zona Waktu</label>
+                                            <select class="form-select" id="timezone">
+                                                <option value="WIB" selected>WIB (UTC+7)</option>
+                                                <option value="WITA">WITA (UTC+8)</option>
+                                                <option value="WIT">WIT (UTC+9)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="videoQuality" class="form-label fw-semibold">Kualitas Video Default</label>
+                                            <select class="form-select" id="videoQuality">
+                                                <option value="auto" selected>Auto</option>
+                                                <option value="1080p">1080p</option>
+                                                <option value="720p">720p</option>
+                                                <option value="480p">480p</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="playbackSpeed" class="form-label fw-semibold">Kecepatan Playback Default</label>
+                                            <select class="form-select" id="playbackSpeed">
+                                                <option value="0.75">0.75x</option>
+                                                <option value="1" selected>1x</option>
+                                                <option value="1.25">1.25x</option>
+                                                <option value="1.5">1.5x</option>
+                                                <option value="2">2x</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Preferensi Konten</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="autoplay" checked>
+                                                    <label class="form-check-label" for="autoplay">
+                                                        Autoplay Video
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="subtitles">
+                                                    <label class="form-check-label" for="subtitles">
+                                                        Subtitle Default
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="darkMode">
+                                                    <label class="form-check-label" for="darkMode">
+                                                        Mode Gelap
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <button type="button" class="btn btn-primary">Simpan Preferensi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Section -->
+                        <div id="privacy-section" class="settings-section d-none">
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Pengaturan Privasi</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <div class="fw-semibold">Profil Publik</div>
+                                            <small class="text-muted">Izinkan pengguna lain melihat profil Anda</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="publicProfile">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <div class="fw-semibold">Progress Pembelajaran</div>
+                                            <small class="text-muted">Tampilkan progress pembelajaran di profil</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="showProgress" checked>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <div class="fw-semibold">Sertifikat</div>
+                                            <small class="text-muted">Tampilkan sertifikat yang diperoleh</small>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="showCertificates" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="fw-bold mb-0">Data & Privasi</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <h6 class="fw-semibold">Download Data Saya</h6>
+                                        <p class="text-muted small">Unduh salinan data pribadi Anda yang tersimpan di platform ini.</p>
+                                        <button class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-download me-1"></i>Download Data
+                                        </button>
+                                    </div>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <h6 class="fw-semibold text-danger">Hapus Akun</h6>
+                                        <p class="text-muted small">Menghapus akun akan menghilangkan semua data Anda secara permanen. Tindakan ini tidak dapat dibatalkan.</p>
+                                        <button class="btn btn-outline-danger btn-sm" onclick="confirmDeleteAccount()">
+                                            <i class="fas fa-trash me-1"></i>Hapus Akun
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.settings-section').forEach(section => {
+                section.classList.add('d-none');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').classList.remove('d-none');
+            
+            // Update active nav item
+            document.querySelectorAll('.list-group-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function confirmDeleteAccount() {
+            if (confirm('Apakah Anda yakin ingin menghapus akun? Tindakan ini tidak dapat dibatalkan.')) {
+                if (confirm('Konfirmasi sekali lagi: Semua data Anda akan hilang permanen.')) {
+                    alert('Akun akan dihapus. Anda akan diarahkan ke halaman utama.');
+                    // Redirect to home page
+                    window.location.href = 'index.html';
+                }
+            }
+        }
+
+        // Form submission handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Profile form
+            const profileForm = document.querySelector('#profile-section form');
+            if (profileForm) {
+                profileForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Profil berhasil diperbarui!');
+                });
+            }
+
+            // Password form
+            const passwordForm = document.querySelector('#account-section form');
+            if (passwordForm) {
+                passwordForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const newPassword = document.getElementById('newPassword').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    
+                    if (newPassword !== confirmPassword) {
+                        alert('Password baru dan konfirmasi password tidak cocok!');
+                        return;
+                    }
+                    
+                    alert('Password berhasil diubah!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

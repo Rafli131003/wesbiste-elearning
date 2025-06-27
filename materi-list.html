@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Pembelajaran - E-Learning PT. Cipta Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar bg-white shadow-sm">
+            <div class="sidebar-header p-3 border-bottom">
+                <a href="index.html" class="text-decoration-none">
+                    <i class="fas fa-hospital-alt text-primary me-2"></i>
+                    <span class="fw-bold text-primary">Cipta Hospital</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-content p-3">
+                <div class="nav flex-column">
+                    <a href="dashboard.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-tachometer-alt me-3"></i>
+                        Dashboard
+                    </a>
+                    <a href="materi-list.html" class="nav-link active d-flex align-items-center py-3">
+                        <i class="fas fa-book-medical me-3"></i>
+                        Materi
+                    </a>
+                    <a href="quiz-list.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-question-circle me-3"></i>
+                        Quiz
+                    </a>
+                    <a href="sertifikat.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-certificate me-3"></i>
+                        Sertifikat
+                    </a>
+                    <a href="settings.html" class="nav-link d-flex align-items-center py-3">
+                        <i class="fas fa-cog me-3"></i>
+                        Settings
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content flex-grow-1">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <h4 class="mb-0 fw-bold text-primary">Materi Pembelajaran</h4>
+                    
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                                <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=DR" class="rounded-circle me-2" alt="Profile">
+                                <span>Dr. John Doe</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <div class="container-fluid p-4">
+                <!-- Search and Filter -->
+                <div class="row mb-4">
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Cari materi pembelajaran...">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select">
+                            <option>Semua Kategori</option>
+                            <option>Kardiologi</option>
+                            <option>Neurologi</option>
+                            <option>Pediatri</option>
+                            <option>Farmakologi</option>
+                            <option>Radiologi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h5 class="fw-bold mb-3">Kategori Pembelajaran</h5>
+                        <div class="row g-3">
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-heartbeat text-danger fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Kardiologi</h6>
+                                        <small class="text-muted">12 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-brain text-primary fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Neurologi</h6>
+                                        <small class="text-muted">8 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-baby text-success fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Pediatri</h6>
+                                        <small class="text-muted">10 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-pills text-warning fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Farmakologi</h6>
+                                        <small class="text-muted">15 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-x-ray text-info fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Radiologi</h6>
+                                        <small class="text-muted">6 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <div class="card border-0 shadow-sm text-center hover-card">
+                                    <div class="card-body py-4">
+                                        <i class="fas fa-user-md text-secondary fs-1 mb-3"></i>
+                                        <h6 class="fw-bold">Umum</h6>
+                                        <small class="text-muted">9 Materi</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course List -->
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="fw-bold mb-3">Semua Materi Pembelajaran</h5>
+                        
+                        <!-- Course Item 1 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="course-thumbnail bg-danger bg-opacity-10 rounded p-3">
+                                            <i class="fas fa-heartbeat text-danger fs-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold mb-2">Pengantar Kardiologi</h5>
+                                        <p class="text-muted mb-2">Pelajari dasar-dasar sistem kardiovaskular, anatomi jantung, dan pemeriksaan fisik kardiovaskular.</p>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-danger me-2">Kardiologi</span>
+                                            <span class="badge bg-light text-dark me-2">Pemula</span>
+                                            <small class="text-muted">
+                                                <i class="fas fa-clock me-1"></i>45 menit
+                                                <i class="fas fa-play-circle ms-3 me-1"></i>5 video
+                                                <i class="fas fa-file-pdf ms-3 me-1"></i>3 PDF
+                                            </small>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                                        </div>
+                                        <small class="text-success">Selesai</small>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center justify-content-end mb-1">
+                                                <div class="text-warning me-2">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <small class="text-muted">4.9</small>
+                                            </div>
+                                            <small class="text-muted">1,234 peserta</small>
+                                        </div>
+                                        <a href="materi.html" class="btn btn-primary">
+                                            <i class="fas fa-play me-2"></i>Lanjutkan
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Item 2 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="course-thumbnail bg-primary bg-opacity-10 rounded p-3">
+                                            <i class="fas fa-brain text-primary fs-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold mb-2">Neurologi Dasar</h5>
+                                        <p class="text-muted mb-2">Memahami sistem saraf pusat dan perifer, pemeriksaan neurologis, dan gangguan neurologis umum.</p>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-primary me-2">Neurologi</span>
+                                            <span class="badge bg-light text-dark me-2">Menengah</span>
+                                            <small class="text-muted">
+                                                <i class="fas fa-clock me-1"></i>60 menit
+                                                <i class="fas fa-play-circle ms-3 me-1"></i>8 video
+                                                <i class="fas fa-file-pdf ms-3 me-1"></i>4 PDF
+                                            </small>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                        </div>
+                                        <small class="text-warning">65% selesai</small>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center justify-content-end mb-1">
+                                                <div class="text-warning me-2">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <small class="text-muted">4.7</small>
+                                            </div>
+                                            <small class="text-muted">892 peserta</small>
+                                        </div>
+                                        <a href="materi.html" class="btn btn-outline-primary">
+                                            <i class="fas fa-play me-2"></i>Lanjutkan
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Item 3 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="course-thumbnail bg-success bg-opacity-10 rounded p-3">
+                                            <i class="fas fa-baby text-success fs-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold mb-2">Pediatri Esensial</h5>
+                                        <p class="text-muted mb-2">Penanganan anak sakit, tumbuh kembang anak, imunisasi, dan penyakit anak yang sering dijumpai.</p>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-success me-2">Pediatri</span>
+                                            <span class="badge bg-light text-dark me-2">Pemula</span>
+                                            <small class="text-muted">
+                                                <i class="fas fa-clock me-1"></i>75 menit
+                                                <i class="fas fa-play-circle ms-3 me-1"></i>10 video
+                                                <i class="fas fa-file-pdf ms-3 me-1"></i>5 PDF
+                                            </small>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-secondary" style="width: 0%"></div>
+                                        </div>
+                                        <small class="text-muted">Belum dimulai</small>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center justify-content-end mb-1">
+                                                <div class="text-warning me-2">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <small class="text-muted">4.8</small>
+                                            </div>
+                                            <small class="text-muted">756 peserta</small>
+                                        </div>
+                                        <a href="materi.html" class="btn btn-success">
+                                            <i class="fas fa-play me-2"></i>Mulai
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Item 4 -->
+                        <div class="card border-0 shadow-sm mb-3 hover-card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2 text-center">
+                                        <div class="course-thumbnail bg-warning bg-opacity-10 rounded p-3">
+                                            <i class="fas fa-pills text-warning fs-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold mb-2">Farmakologi Klinik</h5>
+                                        <p class="text-muted mb-2">Prinsip farmakologi, farmakokinetik, farmakodinamik, dan interaksi obat dalam praktik klinis.</p>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-warning me-2">Farmakologi</span>
+                                            <span class="badge bg-light text-dark me-2">Lanjutan</span>
+                                            <small class="text-muted">
+                                                <i class="fas fa-clock me-1"></i>90 menit
+                                                <i class="fas fa-play-circle ms-3 me-1"></i>12 video
+                                                <i class="fas fa-file-pdf ms-3 me-1"></i>8 PDF
+                                            </small>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                        <small class="text-info">25% selesai</small>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center justify-content-end mb-1">
+                                                <div class="text-warning me-2">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <small class="text-muted">4.6</small>
+                                            </div>
+                                            <small class="text-muted">1,089 peserta</small>
+                                        </div>
+                                        <a href="materi.html" class="btn btn-outline-primary">
+                                            <i class="fas fa-play me-2"></i>Lanjutkan
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
